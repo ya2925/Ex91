@@ -3,7 +3,6 @@ package com.Menu.ex91;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,14 +14,14 @@ import android.widget.LinearLayout;
  * @version 1.0
  * @since 2023-09-18
  */
-public class MainActivity2 extends AppCompatActivity {
+public class secondActivity extends AppCompatActivity {
 
     LinearLayout activity2Layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.second_activity);
 
         activity2Layout = (LinearLayout) findViewById(R.id.activity2Layout);
     }
@@ -33,9 +32,7 @@ public class MainActivity2 extends AppCompatActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("red");
-        menu.add("green");
-        menu.add("blue");
+        getMenuInflater().inflate(R.menu.colors, menu);
         menu.add("yellow");
 
         return super.onCreateOptionsMenu(menu);

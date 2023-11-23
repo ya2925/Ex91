@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("red");
-        menu.add("green");
-        menu.add("blue");
+        getMenuInflater().inflate(R.menu.colors, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view the button that was clicked.
      */
     public void goToSecondActivity(View view) {
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, secondActivity.class);
         startActivity(intent);
     }
 
